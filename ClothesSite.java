@@ -75,11 +75,11 @@ public class ClothesSite {
             }
             Map<Integer,String> productPrice = new LinkedHashMap<>();
              for (int count =0;count< searchedClothes.size();count++){
-            String name = searchedClothes.get(count).getText();
-            String prices = clothesPrice.get(count).getText();
-            prices= prices.replace("$","");
+            String productName = searchedClothes.get(count).getText();
+            String productPrices = clothesPrice.get(count).getText();
+            productPrices= productPrices.replace("$","");
             int num = Integer.parseInt(prices.replace(".",""));
-            productPrice.put(num,name);
+            productPrices.put(num,productName);
         }
         Set<Integer> set = productPrice.keySet();
         ArrayList<Integer> list = new ArrayList<Integer>(set);
